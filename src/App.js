@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import TurnoverRate from "./Components/TurnoverRate";
+import ResultBox from "./Components/ResultBox";
+import SplitPane from "./Components/SplitPane/index";
+import Signup from "./Components/FormSignUp";
+import validator from "./services/validator";
+import ToolContent from "./Components/ToolContent";
 
-function App() {
+const App = () => {
+  // Rate is turnover rate
+  const [rate, setRate] = useState(0);
+  const [done, setDone] = useState(false);
+  const handleTurnOverRate = (value) => {
+    setRate(value);
+  };
+  const handleDone = (value) => {
+    setDone(value);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SplitPane
+        left={<TurnoverRate handleTurnOverRate={handleTurnOverRate} />}
+        right={
+          !done ? (
+            <Signup validate={validator} handleDone={handleDone} />
+          ) : (
+            <ResultBox rate={rate} />
+          )
+        }
+      />
+      <SplitPane left={<ToolContent />} right="" />
     </div>
   );
-}
+};
 
 export default App;

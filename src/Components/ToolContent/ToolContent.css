@@ -1,0 +1,21 @@
+.tool-content__title {
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: -0.3px;
+  color: #23364e;
+  margin-bottom: 16px;
+}
+.tool-content__main {
+  font-size: 14px;
+  margin-bottom: 14px;
+  font-weight: normal;
+}
+.tool-content__main-item span {
+  padding: 4px;
+  text-align: center;
+  color: #4f5e71;
+  margin-right: 8px;
+}

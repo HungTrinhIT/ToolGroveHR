@@ -1,0 +1,15 @@
+.splitpane-container {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-gap: 32px;
+}
+
+.splitpane-left {
+  grid-column: 1/17;
+  background-color: var(--white);
+}
+
+.splitpane-right {
+  grid-column: 17/25;
+  background-color: var(--white);
+}

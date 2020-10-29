@@ -1,0 +1,18 @@
+.turnover-rate {
+  display: flex;
+  align-items: center;
+}
+.turnover-rate .user-icon {
+  background-color: var(--prim100);
+  color: var(--white);
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+.turnover-rate .section-title {
+  color: #23364e;
+  font-size: 16px;
+  font-weight: bold;
+}

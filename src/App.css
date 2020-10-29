@@ -1,38 +1,245 @@
-.App {
+@import "~antd/dist/antd.css";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, Arial, serif;
+  background-color: #f2f5f7;
+}
+
+/* Global styles */
+:root {
+  --primary: #2ad25f;
+  --medium: #27bf57;
+  --dark: #0e223d;
+
+  /* Primary color */
+  --prim100: #2ad25f;
+  --prim85: #64de8a;
+  --prim75: #77e29a;
+  --prim65: #9feab6;
+  --prim45: #bceecb;
+  --prim25: #d8f6e2;
+  --prim15: #ebfbf0;
+  --prim5: #f3fff7;
+
+  /* Medium color */
+  --medi100: #14602c;
+  --medi85: #177334;
+  --medi75: #1b863d;
+  --medi65: #1f9946;
+  --medi45: #27bf57;
+  --medi24: #27bf57;
+  --medi15: #0ec648;
+  --medi5: rgba(52 52 52, 0.25);
+
+  /* Slat color */
+  --slat100: #4f5e71;
+  --slat85: #657283;
+  --slat75: #919aa6;
+  --slat65: #a7aeb8;
+  --slat45: #d3d6db;
+  --slat24: #e9eaed;
+  --slat15: #f3f3f5;
+  --slat5: #f8f8f9;
+
+  /* Dark color */
+  --dark100: #0e223d;
+  --dark85: #23364e;
+  --dark75: #394a60;
+  --dark65: #3c5264;
+
+  /* Bird color */
+  --bird100: #5f7d95;
+  --bird85: #7d95a8;
+  --bird75: #93a8b9;
+  --bird65: #afbeca;
+  --bird45: #d4dfe7;
+  --bird25: #e0e6ea;
+  --bird15: #e3ebf1;
+  --bird5: #ebf0f4;
+  --bird3: #eef3f6;
+  --bird2: #f3f7fa;
+  --bird1: #f9fafb;
+
+  /* Grey color */
+  --grey100: #434343;
+  --grey85: #656565;
+  --grey75: #878787;
+  --grey65: #a5a5a5;
+  --grey45: #bababa;
+  --grey25: #dcdcdc;
+  --grey15: #ededed;
+  --grey5: #f7f7f7;
+  --grey1: #fbfbfb;
+
+  /* White */
+  --white: #ffffff;
+
+  /* Secondary color */
+  --red: #e2574c;
+  --green: #4dac4a;
+  --orange: #f29132;
+  --yellow: #f8e71c;
+}
+
+/* Typography*/
+h1 {
+  font-family: Inter;
+  font-size: 26px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 34px;
+  letter-spacing: -0.35px;
+  color: var(--dark100);
+}
+
+h2 {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 30px;
+  letter-spacing: -0.4px;
+  color: var(--dark100);
+}
+
+h3 {
+  font-family: Inter;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 30px;
+  letter-spacing: -0.3px;
+  color: var(--dark100);
+}
+
+h4 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: -0.3px;
+  color: var(--dark100);
+}
+
+h5 {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  color: var(--dark85);
+}
+
+h6 {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 23px;
+  letter-spacing: -0.3px;
+  color: var(--dark100);
+}
+
+.h7 {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: -0.3px;
+  color: var(--dark100);
+}
+
+p {
+  font-family: Inter;
+  letter-spacing: normal;
+  color: var(--slat100);
+  margin-bottom: 0;
+}
+
+.para-l {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.para-m {
+  font-size: 14px;
+  line-height: 1.57;
+}
+.para-s {
+  font-size: 13px;
+  line-height: 1.54;
+}
+.para-xs {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Link */
+a {
+  text-decoration: none;
+}
+
+/* Icon Unicons */
+.icon {
+  font-family: unicons;
+  color: #4f5e71;
+  font-style: normal;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Media query */
+/* >=568px */
+@media only screen and (min-width: 568px) {
+  body {
+    padding: 0 32px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* >=768px */
+@media only screen and (min-width: 768px) {
+  body {
+    padding: 0 40px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* >=992px */
+@media only screen and (min-width: 992px) {
+  body {
+    padding: 0 40px;
+  }
+}
+
+/* >=1280px */
+@media only screen and (min-width: 1280px) {
+  body {
+    padding: 0 128px;
+  }
+}
+/* >=1400px */
+@media only screen and (min-width: 1440px) {
+  body {
+    padding: 0 160px;
+  }
+}
+
+/* >=1920px */
+@media only screen and (min-width: 1920px) {
+  body {
+    padding: 0 400px;
   }
 }

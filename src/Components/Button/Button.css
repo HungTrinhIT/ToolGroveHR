@@ -1,0 +1,18 @@
+.button-primary {
+  margin-bottom: 12px;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  background-color: #34d25d;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.button-primary:hover {
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 0 rgba(20, 163, 38, 0.21);
+  background-color: #48b465;
+}

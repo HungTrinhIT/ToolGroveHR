@@ -1,0 +1,107 @@
+body {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/geometry2.png");
+}
+
+/* necessary to give position: relative to parent. */
+.input-wrp {
+  margin-bottom: 8px;
+}
+.input-wrp label {
+  color: #3c5264;
+  font-size: 13px;
+  margin-bottom: 6px;
+  display: inline-block;
+  font-weight: 600;
+}
+:focus {
+  outline: none;
+}
+.input-control {
+  width: 100%;
+  position: relative;
+} /* necessary to give position: relative to parent. */
+input[type="text"] {
+  font: 15px/24px "Inter";
+  color: rgb(66, 66, 66);
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+}
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #698194;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #698194;
+}
+
+::placeholder {
+  color: #698194;
+}
+.effect-20 {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  transition: 0.4s;
+  background: transparent;
+}
+
+.effect-20 ~ .focus-border:before,
+.effect-20 ~ .focus-border:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4caf50;
+  transition: 0.3s;
+}
+.effect-20 ~ .focus-border:after {
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 0;
+}
+.effect-20 ~ .focus-border i:before,
+.effect-20 ~ .focus-border i:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: #4caf50;
+  transition: 0.4s;
+}
+.effect-20 ~ .focus-border i:after {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+}
+.effect-20:focus ~ .focus-border:before,
+.effect-20:focus ~ .focus-border:after,
+.has-content.effect-20 ~ .focus-border:before,
+.has-content.effect-20 ~ .focus-border:after {
+  width: 100%;
+  transition: 0.3s;
+}
+.effect-20:focus ~ .focus-border i:before,
+.effect-20:focus ~ .focus-border i:after,
+.has-content.effect-20 ~ .focus-border i:before,
+.has-content.effect-20 ~ .focus-border i:after {
+  height: 100%;
+  transition: 0.4s;
+}
+
+.input-wrp small {
+  color: rgb(226, 87, 76);
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+}
